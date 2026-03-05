@@ -105,15 +105,16 @@ class Trajet
             'INSERT INTO trajets 
                 (gdh_depart, gdh_arrivee, nb_places_total, nb_places_disponibles, id_employe, id_agence_depart, id_agence_arrivee)
              VALUES 
-                (:gdh_depart, :gdh_arrivee, :nb_places_total, :nb_places_total, :id_employe, :id_agence_depart, :id_agence_arrivee)'
+                (:gdh_depart, :gdh_arrivee, :nb_places_total, :nb_places_disponibles, :id_employe, :id_agence_depart, :id_agence_arrivee)'
         );
         return $stmt->execute([
-            ':gdh_depart'       => $data['gdh_depart'],
-            ':gdh_arrivee'      => $data['gdh_arrivee'],
-            ':nb_places_total'  => $data['nb_places_total'],
-            ':id_employe'       => $data['id_employe'],
-            ':id_agence_depart' => $data['id_agence_depart'],
-            ':id_agence_arrivee'=> $data['id_agence_arrivee'],
+            ':gdh_depart'             => $data['gdh_depart'],
+            ':gdh_arrivee'            => $data['gdh_arrivee'],
+            ':nb_places_total'        => $data['nb_places_total'],
+            ':nb_places_disponibles'  => $data['nb_places_total'],
+            ':id_employe'             => $data['id_employe'],
+            ':id_agence_depart'       => $data['id_agence_depart'],
+            ':id_agence_arrivee'      => $data['id_agence_arrivee'],
         ]);
     }
 
