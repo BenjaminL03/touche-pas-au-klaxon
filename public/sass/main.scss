@@ -1,0 +1,36 @@
+// ============================================================
+// Touche Pas au Klaxon — Feuille de styles principale
+// Palette imposée par le CEF :
+//   #f1f8fc (bleu très clair)
+//   #0074c7 (bleu)
+//   #00497c (bleu foncé)
+//   #384050 (gris bleuté)
+//   #cd2c2e (rouge)
+//   #82b864 (vert)
+// ============================================================
+
+// --- Import Bootstrap avec surcharge des variables ---
+@use "../../node_modules/bootstrap/scss/bootstrap" with (
+  $primary: #0074c7,
+  $secondary: #384050,
+  $success: #82b864,
+  $danger: #cd2c2e,
+  $dark: #00497c,
+  $light: #f1f8fc,
+  $body-bg: #f1f8fc,
+  $body-color: #384050
+);
+
+// --- Styles personnalisés ---
+
+footer {
+  background-color: #f1f8fc;
+  border-top: 1px solid #d6eaf4;
+  color: #384050;
+}
+
+.alert-secondary {
+  background-color: #f1f8fc;
+  border-color: #d6eaf4;
+  color: #384050;
+}

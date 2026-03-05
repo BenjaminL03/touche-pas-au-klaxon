@@ -1,0 +1,15 @@
+{
+  "name": "klaxon",
+  "version": "1.0.0",
+  "description": "Application de covoiturage intranet",
+  "scripts": {
+    "sass-build": "sass public/sass/main.scss public/css/main.css --silence-deprecation=import --silence-deprecation=global-builtin --silence-deprecation=color-functions --silence-deprecation=if-function",
+    "sass-watch": "sass public/sass/main.scss public/css/main.css --watch --silence-deprecation=import --silence-deprecation=global-builtin --silence-deprecation=color-functions --silence-deprecation=if-function"
+  },
+  "devDependencies": {
+    "sass": "^1.x"
+  },
+  "dependencies": {
+    "bootstrap": "^5.x"
+  }
+}

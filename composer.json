@@ -1,0 +1,12 @@
+{
+    "name": "benjamin/klaxon",
+    "description": "Application de covoiturage intranet",
+    "autoload": {
+        "psr-4": {
+            "Benjamin\\Klaxon\\": "app/"
+        }
+    },
+    "require": {
+        "izniburak/router": "^3.1"
+    }
+}
