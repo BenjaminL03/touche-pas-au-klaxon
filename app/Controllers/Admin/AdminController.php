@@ -5,8 +5,6 @@ declare(strict_types=1);
 namespace Benjamin\Klaxon\Controllers\Admin;
 
 use Benjamin\Klaxon\Models\Trajet;
-use Benjamin\Klaxon\Models\Employe;
-use Benjamin\Klaxon\Models\Agence;
 
 /**
  * Contrôleur du tableau de bord administrateur
@@ -14,15 +12,11 @@ use Benjamin\Klaxon\Models\Agence;
 class AdminController
 {
     private Trajet $trajet;
-    private Employe $employe;
-    private Agence $agence;
 
     public function __construct()
     {
         global $pdo;
-        $this->trajet  = new Trajet($pdo);
-        $this->employe = new Employe($pdo);
-        $this->agence  = new Agence($pdo);
+        $this->trajet = new Trajet($pdo);
     }
 
     /**

@@ -24,9 +24,5 @@ require_once __DIR__ . '/../config/database.php';
 // Supprime le préfixe /klaxon pour que le routeur fonctionne en sous-dossier
 $_SERVER['REQUEST_URI'] = str_replace('/klaxon', '', $_SERVER['REQUEST_URI']) ?: '/';
 
-
-echo "URI: " . $_SERVER['REQUEST_URI'] . " | METHOD: " . $_SERVER['REQUEST_METHOD']; 
-
-
 // Chargement des routes
 require_once __DIR__ . '/../config/routes.php';

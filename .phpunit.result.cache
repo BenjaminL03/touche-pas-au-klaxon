@@ -1,1 +1,1 @@
-{"version":2,"defects":[],"times":{"TrajetTest::testCreate":0.001,"TrajetTest::testUpdate":0,"TrajetTest::testDelete":0,"TrajetTest::testFindByIdReturnsfalseWhenNotFound":0}}
+{"version":2,"defects":[],"times":{"TrajetTest::testCreate":0,"TrajetTest::testUpdate":0,"TrajetTest::testDelete":0,"TrajetTest::testFindByIdReturnsfalseWhenNotFound":0,"AgenceTest::testCreate":0,"AgenceTest::testCreateAndFind":0,"AgenceTest::testUpdate":0,"AgenceTest::testDelete":0,"AgenceTest::testFindByIdReturnsFalseWhenNotFound":0}}

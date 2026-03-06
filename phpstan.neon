@@ -4,3 +4,4 @@ parameters:
         - app
     excludePaths:
         - vendor
+        - app/Views
