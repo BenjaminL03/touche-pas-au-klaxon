@@ -46,7 +46,7 @@
                             <i class="bi bi-eye"></i>
                         </button>
 
-                        <?php if ($_SESSION['user']['id'] === (int)$trajet['id_employe']): ?>
+                        <?php if ($_SESSION['user']['id'] === (int)$trajet['id_employe'] || $_SESSION['user']['role'] === 'admin'): ?>
                             <!-- Modifier -->
                             <a href="/klaxon/trajets/<?= $trajet['id_trajet'] ?>/edit"
                                class="btn btn-sm btn-outline-secondary">

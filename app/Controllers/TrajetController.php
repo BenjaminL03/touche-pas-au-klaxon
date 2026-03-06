@@ -120,8 +120,8 @@ class TrajetController
             exit;
         }
 
-        // Seul l'auteur peut modifier
-        if ($trajet['id_employe'] !== $_SESSION['user']['id']) {
+        // Seul l'auteur ou l'admin peut modifier
+        if ($trajet['id_employe'] !== $_SESSION['user']['id'] && $_SESSION['user']['role'] !== 'admin') {
             header('Location: /klaxon');
             exit;
         }
@@ -141,7 +141,7 @@ class TrajetController
         $trajet  = $this->trajet->findById($id);
         $agences = $this->agence->findAll();
 
-        if (!$trajet || $trajet['id_employe'] !== $_SESSION['user']['id']) {
+        if (!$trajet || ($trajet['id_employe'] !== $_SESSION['user']['id'] && $_SESSION['user']['role'] !== 'admin')) {
             header('Location: /klaxon');
             exit;
         }
@@ -204,8 +204,8 @@ class TrajetController
             exit;
         }
 
-        // Seul l'auteur peut supprimer
-        if ($trajet['id_employe'] !== $_SESSION['user']['id']) {
+        // Seul l'auteur ou l'admin peut supprimer
+        if ($trajet['id_employe'] !== $_SESSION['user']['id'] && $_SESSION['user']['role'] !== 'admin') {
             header('Location: /klaxon');
             exit;
         }

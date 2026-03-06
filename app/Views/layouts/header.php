@@ -19,6 +19,8 @@
                 <a href="/klaxon/admin/employes" class="btn btn-secondary">Utilisateurs</a>
                 <a href="/klaxon/admin/agences"  class="btn btn-secondary">Agences</a>
                 <a href="/klaxon/admin/trajets"  class="btn btn-secondary">Trajets</a>
+                <a href="/klaxon/trajets/create" class="btn btn-secondary">Créer un trajet</a>
+                <a href="/klaxon"                class="btn btn-secondary">Accueil</a>
                 <span class="text-white">Bonjour <?= htmlspecialchars($_SESSION['user']['prenom'] . ' ' . $_SESSION['user']['nom']) ?></span>
                 <a href="/klaxon/logout" class="btn btn-light">Déconnexion</a>
             </div>

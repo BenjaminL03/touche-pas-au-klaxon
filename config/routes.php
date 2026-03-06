@@ -43,7 +43,34 @@ $router->post('/trajets/:id/delete', function(Request $req, Response $res, int $
 
 // --- Admin ---
 $router->get('/admin', function(Request $req, Response $res) {
-    echo "Admin OK";
+    (new \Benjamin\Klaxon\Controllers\Admin\AdminController())->index();
+});
+$router->get('/admin/employes', function(Request $req, Response $res) {
+    (new \Benjamin\Klaxon\Controllers\Admin\EmployeController())->index();
+});
+$router->get('/admin/agences', function(Request $req, Response $res) {
+    (new \Benjamin\Klaxon\Controllers\Admin\AgenceController())->index();
+});
+$router->get('/admin/agences/create', function(Request $req, Response $res) {
+    (new \Benjamin\Klaxon\Controllers\Admin\AgenceController())->create();
+});
+$router->post('/admin/agences/create', function(Request $req, Response $res) {
+    (new \Benjamin\Klaxon\Controllers\Admin\AgenceController())->store();
+});
+$router->get('/admin/agences/:id/edit', function(Request $req, Response $res, int $id) {
+    (new \Benjamin\Klaxon\Controllers\Admin\AgenceController())->edit($id);
+});
+$router->post('/admin/agences/:id/edit', function(Request $req, Response $res, int $id) {
+    (new \Benjamin\Klaxon\Controllers\Admin\AgenceController())->update($id);
+});
+$router->post('/admin/agences/:id/delete', function(Request $req, Response $res, int $id) {
+    (new \Benjamin\Klaxon\Controllers\Admin\AgenceController())->destroy($id);
+});
+$router->get('/admin/trajets', function(Request $req, Response $res) {
+    (new \Benjamin\Klaxon\Controllers\Admin\AdminController())->trajets();
+});
+$router->post('/admin/trajets/:id/delete', function(Request $req, Response $res, int $id) {
+    (new \Benjamin\Klaxon\Controllers\Admin\AdminController())->destroyTrajet($id);
 });
 
 $router->run();
